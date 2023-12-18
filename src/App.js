@@ -1,4 +1,5 @@
 import './App.css';
+import Webpages from './webpages';
 
 function App() {
   return (
@@ -10,17 +11,15 @@ function App() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/">Users</a>
+              <a href="/user">Users</a>
             </li>
             <li>
-              <a href="/lista">Lista Factos</a>
-            </li>
-            <li>
-              <a href="/nome">Nome</a>
+              <a href="/lista">Lista Usuarios</a>
             </li>
           </ul>
         </nav>
       </header>
+      <Webpages></Webpages>
     </div>
   );
 }
