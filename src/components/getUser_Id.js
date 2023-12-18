@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
-const Facto=()=>{
+import { useParams, Link } from "react-router-dom";
 
+const ListOfUser=()=>{
+    let {id}=useParams();
     const [error, setError]=useState(null);
-    const [facto, setFacto]=useState([]);
+    const [users, setUsers]=useState([]);
     const [isloaded, setIsloaded]=useState(false);
     useEffect(()=>{
-        fetch("https://catfact.ninja/fact")
+        fetch("https://localhost:7271/api/ApplicationUsers/"+id)
         .then(res=>res.json())
         .then((data)=>{
             setIsloaded(true);
-            setFacto(data);
+            setUsers(data);
         },
         (error)=>{
             setIsloaded(false);
@@ -19,7 +21,7 @@ const Facto=()=>{
     );
     if(error){
     return(<div>
-        <h1>Facto</h1>
+        <h1>Utilizador</h1>
         <ul>
             <li>Erro:{error.message}</li>
         </ul>
@@ -33,10 +35,15 @@ const Facto=()=>{
     }
     else{
         return(
-         
-                <p>{facto.fact}</p>
-             
+            <div>
+                <h1>Detalhes do utilizador</h1>
+                <p>Nome: {users.userName}</p>
+                <p>Email: {users.email}</p>
+                <p>Morada: {users.advertisements}</p>
+                <p>Cidade: {users.favorites}</p>
+                <a href="../">Voltar</a>
+            </div>
         )
     }
 }
-export default Facto
+export default ListOfUser;
