@@ -3,8 +3,8 @@ import Webpages from './webpages';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header>
         <nav>
           <ul>
             <li>
@@ -14,7 +14,7 @@ function App() {
               <a href="/user">Users</a>
             </li>
             <li>
-              <a href="/lista">Lista Usuarios</a>
+              <a href="/advertising">Lista Anuncios</a>
             </li>
           </ul>
         </nav>

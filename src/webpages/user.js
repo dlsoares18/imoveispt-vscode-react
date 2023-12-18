@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+
 const User=()=>{
     let {id}=useParams();
     const [error, setError]=useState(null);

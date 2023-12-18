@@ -5,7 +5,7 @@ const Facto=()=>{
     const [facto, setFacto]=useState([]);
     const [isloaded, setIsloaded]=useState(false);
     useEffect(()=>{
-        fetch("https://localhost:7271/api/ApplicationUsers/")
+        fetch("https://catfact.ninja/fact")
         .then(res=>res.json())
         .then((data)=>{
             setIsloaded(true);
