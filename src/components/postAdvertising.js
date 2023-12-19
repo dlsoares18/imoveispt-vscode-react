@@ -11,7 +11,7 @@ const CreateAdvertising = () => {
    e.preventDefault();
    try {
      // Make a POST request to the API endpoint
-     await axios.post('https://localhost:7271/api/ApplicationUsers', {
+     await axios.post('https://localhost:7271/api/ApplicationUsers/', {
        userName: userName,
        email: email
      });
