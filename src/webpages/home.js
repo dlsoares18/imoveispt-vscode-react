@@ -6,6 +6,25 @@ import CreateAdvertising from '../components/postAdvertising';
 function Home() {
   return (
     <div>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/user">Users</a>
+            </li>
+            <li>
+              <a href="/advertising">Lista Anuncios</a>
+            </li>
+            <li><a href="/register">Cadastrar Conta</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <hr/>
+
       <ListOfAdvertising/>
       <GetUser/>
       <CreateAdvertising/>
