@@ -1,11 +1,25 @@
 import './App.css';
-import AppRoutes from './appRoutes/appRoutes.js';
-
+import Webpages from './webpages';
 
 function App() {
   return (
     <div>
-      <AppRoutes></AppRoutes>    
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/user">Users</a>
+            </li>
+            <li>
+              <a href="/advertising">Lista Anuncios</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <Webpages></Webpages>
     </div>
   );
 }
