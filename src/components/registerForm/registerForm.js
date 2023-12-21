@@ -6,9 +6,10 @@ import "./registerForm.css";
 function RegisterForm() {
 
    const [postData, setPostData] = useState({
-       userName: '',
-       email: '',
-       password: '',
+        firstName: "",
+        lastName: "",
+        email: '',
+        password: '',
      });
    
    const handleInputChange = (e) => {
@@ -37,17 +38,29 @@ function RegisterForm() {
 
          <form>
             <div className="inputContainer">
-                <label htmlFor="userName">Nome</label>                
+                <label htmlFor="firstName">Nome</label>                
                 <input 
                     type="text" 
-                    name="userName" 
-                    id="userName"
-                    value={postData.userName} 
+                    name="firstName" 
+                    id="firstName"
+                    value={postData.firstName} 
                     onChange={handleInputChange}
-
                     required 
                 />
             </div>
+
+            <div className="inputContainer">
+                <label htmlFor="lastName">Apelido</label>                
+                <input 
+                    type="text" 
+                    name="lastName" 
+                    id="lastName"
+                    value={postData.lastName} 
+                    onChange={handleInputChange}
+                    required 
+                />
+            </div>
+            
 
             <div className="inputContainer">
                 <label htmlFor="email">Email</label>                
