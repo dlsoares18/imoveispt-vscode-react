@@ -1,0 +1,40 @@
+.container {
+display: flex;
+justify-content: space-between;
+}
+
+.filterContainer {
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+ .inputFilterContainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    padding-left: 10px;;
+ }
+ 
+ .inputLabel {
+    margin-bottom: 5px;
+    color: #4D5361;
+ }
+
+ input, select, button {
+    width:150px;
+ }
+
+ .container .filterContainer button{
+    border: none;
+    color: #fff;
+    width: 100px;
+    margin-top: 15px;
+    margin-left: 10px;
+    background: #613A46;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.container form button:hover {
+    background-color: #6e424f;
+}
