@@ -13,12 +13,11 @@ function Home() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/user">Users</a>
-            </li>
-            <li>
               <a href="/advertising">Lista Anuncios</a>
             </li>
-            <li><a href="/register">Cadastrar Conta</a></li>
+            <li>
+              <a href="/register">Cadastrar Conta</a>
+            </li>
           </ul>
         </nav>
       </header>

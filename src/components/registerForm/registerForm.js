@@ -5,38 +5,39 @@ import "./registerForm.css";
 
 function RegisterForm() {
 
-   const [postData, setPostData] = useState({
+    const [postData, setPostData] = useState({
         firstName: "",
         lastName: "",
         email: '',
         password: '',
      });
+     
+    const [error, setError] = useState(null);
    
-   const handleInputChange = (e) => {
+    const handleInputChange = (e) => {
        const { name, value } = e.target;
        setPostData((prevData) => ({
          ...prevData,
          [name]: value,
        }));
-   };
+    };
    
-   const handlePostRequest = async () => {
+    const handlePostRequest = async () => {
        try {
          const response = await axios.post('https://localhost:7271/api/Authenticate/register', postData);
          console.log('Resposta da API:', response.data);
        } catch (error) {
          console.error('Erro ao fazer a solicitação POST:', error);
-         // Adicione lógica para lidar com o erro, se necessário
+         setError('Ocorreu um erro durante o cadastro. Por favor, tente novamente.'); // Mensagem de erro amigável
        }
-   };
+    };
    
-   return (
+    return (
        <div className="container">
-         <header className="header">
+        <header className="header">
             <span>Cadastro de Conta</span>
-         </header>
-
-         <form>
+        </header>
+        <form>
             <div className="inputContainer">
                 <label htmlFor="firstName">Nome</label>                
                 <input 
@@ -75,7 +76,7 @@ function RegisterForm() {
             </div>
 
             <div className="inputContainer">
-                <label htmlFor="password">Senha</label>                
+                <label htmlFor="password">Senha</label>
                 <input 
                     type="password" 
                     name="password" 
@@ -87,15 +88,15 @@ function RegisterForm() {
                     required 
                 />
             </div>
-
+            {error && <div className="error-message">{error}</div>} 
             <button type="button" onClick={handlePostRequest}>
                 Cadastrar
             </button>            
-         </form>
+        </form>
 
-       </div>
-     );
-   };
+        </div>
+        );
+    };
 
 /*    
     const [firstName, setFirstName] = useState('');
