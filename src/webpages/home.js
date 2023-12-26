@@ -1,7 +1,6 @@
 import React from 'react';
-import GetUser from '../components/getUser';
 import ListOfAdvertising from '../components/getAdvertising';
-import CreateAdvertising from '../components/postAdvertising';
+import PostAdvertising from '../components/postAdvertising';
 
 function Home() {
   return (
@@ -25,8 +24,7 @@ function Home() {
       <hr/>
 
       <ListOfAdvertising/>
-      <GetUser/>
-      <CreateAdvertising/>
+      <PostAdvertising/>
     </div>
   );
 }
