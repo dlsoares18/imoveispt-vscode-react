@@ -1,8 +1,4 @@
 import React from 'react';
-import GetUser from '../components/getUser';
-import ListOfAdvertising from '../components/getAdvertising';
-import AdvertisementList from "../components/advertisementList/advertisementList";
-import PostAdvertising from '../components/postAdvertising';
 
 //import CreateAdvertising from '../components/postAdvertising';
 
@@ -26,6 +22,9 @@ function Home() {
             </li>
             <li>
               <a href="/advertisements">Anúncios</a>
+            </li>
+            <li>
+              <a href="/newadvertisement">Criar anúncio</a>
             </li>
           </ul>
         </nav>

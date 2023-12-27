@@ -33,7 +33,7 @@ function RegisterForm() {
     };
    
     return (
-       <div className="container">
+       <div className="container-register">
         <header className="header">
             <span>Cadastro de Conta</span>
         </header>

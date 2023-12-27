@@ -4,6 +4,7 @@ import User from "../components/getUser_Id";
 import Register from "../webpages/register.js";
 import Login from "../webpages/login.js";
 import Advertisements from "../webpages/index.js";
+import CreateAdvertisement from "../webpages/createAdvertisiment.js";
 
 const AppRoutes=()=>{
     return(
@@ -14,6 +15,7 @@ const AppRoutes=()=>{
             <Route exact path="/register" element={<Register/>}/>
             <Route exact path="/login" element={<Login/>}/>
             <Route exact path="/advertisements" element={<Advertisements/>}/>
+            <Route exact path="/newadvertisement" element={<CreateAdvertisement/>}/>
         </Routes>
         </BrowserRouter>
     )

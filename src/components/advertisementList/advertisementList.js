@@ -119,8 +119,10 @@ function AdvertisementList() {
     }
     else {
         return (
-            <div className="container">
+            <div className="container-adds">
+                
                 <div className="filterContainer">
+                    
                     <div className="inputFilterContainer">
                         <label className="inputLabel">
                             Tipo de Propriedade:<br/>
@@ -199,7 +201,7 @@ function AdvertisementList() {
             <div className="advertisementsContainer">
                 {advertisements.map((advertisement) => (
                     <div key={advertisement.id}>
-                    <Link to={`advertisement/${advertisement.id}`}>
+                    <Link to={`advertisement/${advertisement.id}`} style={{ textDecoration: 'none' }} >
                         <AdvertisementCard advertisement={advertisement} />
                     </Link>
                     </div>

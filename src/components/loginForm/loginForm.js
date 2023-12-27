@@ -29,7 +29,7 @@ function LoginForm() {
    };
    
    return (
-       <div className="container">
+       <div className="container-login">
             <header className="header">
                 <span>Entre na sua Conta</span>
             </header>
