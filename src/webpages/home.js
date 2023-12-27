@@ -16,7 +16,7 @@ function Home() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/user">Users</a>
+              <a href="/advertising">Lista Anuncios</a>
             </li>
             <li>
               <a href="/register">Cadastrar Conta</a>
