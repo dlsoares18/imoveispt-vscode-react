@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./advertisementList.css";
 import { Link } from "react-router-dom";
+import AdvertisementCard from "../advertisementCard/advertisementCard";
 
 
 function AdvertisementList() {
@@ -118,8 +119,10 @@ function AdvertisementList() {
     }
     else {
         return (
-            <div className="container">
+            <div className="container-adds">
+                
                 <div className="filterContainer">
+                    
                     <div className="inputFilterContainer">
                         <label className="inputLabel">
                             Tipo de Propriedade:<br/>
@@ -198,22 +201,13 @@ function AdvertisementList() {
             <div className="advertisementsContainer">
                 {advertisements.map((advertisement) => (
                     <div key={advertisement.id}>
-                        <Link to={`advertisement/${advertisement.id}`}>
-                            <img src={advertisement.picture}/><br/>
-                            {advertisement.title}<br/>
-                            {advertisement.addressLocation} <br/>
-                            {advertisement.area} <br/>
-                            {advertisement.bedrooms} <br/>
-                            {advertisement.bathrooms} <br/>
-                            {advertisement.price} <br/>
-                            {advertisement.status} <br/>
-                        </Link>
-                        <br/>
-                        console.log({advertisement.picture});
-                </div>
-            ))}
+                    <Link to={`advertisement/${advertisement.id}`} style={{ textDecoration: 'none' }} >
+                        <AdvertisementCard advertisement={advertisement} />
+                    </Link>
+                    </div>
+                ))}
             </div>
-            </div>
+        </div>
             
         );
     }

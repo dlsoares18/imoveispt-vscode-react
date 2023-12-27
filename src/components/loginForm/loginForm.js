@@ -50,17 +50,7 @@ function LoginForm() {
                 /*   TODO:
 
                     - later to logout use: 
-                        localStorage.removeItem('token');
-
-                    - To get the token and send to the backend:
-                        const token = localStorage.getItem('token');
-        
-                        axios.get('/protected-route', {
-                        headers: {
-                        Authorization: `Bearer ${token}`
-                        }
-                        }); 
-                        
+                        localStorage.removeItem('token');                        
                 */
 
 
@@ -75,7 +65,7 @@ function LoginForm() {
 
     return (
 
-        <div className="container">
+        <div className="container-login">
             <header className="header">
                 <span>Entre na sua Conta</span>
             </header>

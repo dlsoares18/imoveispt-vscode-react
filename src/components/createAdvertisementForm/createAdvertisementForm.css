@@ -1,21 +1,20 @@
-.container-login{
+.container-create-add{
     width: 100vw;
     height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.container-login  .header {
+.container-create-add .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
 }
 
-.container-login .header span {
+.container-create-add .header span {
     padding-top: 15px;
     font-weight: 500;
     font-size: 30px;
@@ -23,63 +22,57 @@
     color: #4D5361;
 }
 
-.container-login form {
+.container-create-add form {
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow: auto;
 }
 
-.container-login form .inputContainer {
+.container-create-add form .inputContainer {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
 }
 
-.container-login form .inputContainer label {
+.container-create-add form .inputContainer label{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
     margin-bottom: 8px;
 }
 
-.container-login form .inputContainer input {
+.container-create-add form .inputContainer input, .container-create-add form .inputContainer select {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 5px;
     width: 450px;
     height: 26px;
-    font-size: 16px;
+    font-size: 12px;
     border: 1px solid #4D5361;
     border-radius: 5px;
     margin-bottom: 12px;
+    box-sizing: border-box;
 }
 
-.container-login form button{
+.container-create-add button{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border: none;
     color: #fff;
-    width: 462px;
+    width: 300px;
     height: 26px;
     padding: 19px;
     background: #613A46;
     border-radius: 5px;
     font-size: 18px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.container-login form button:hover {
+.container-create-add button:hover {
     background-color: #6e424f;
-}
-
-.container-login .footer {
-    padding-top: 10px;
-}
-
-.container-login .footer a{
-    color:  #6e424f;
-    font-weight: bold;
 }

@@ -3,7 +3,7 @@ import React from "react";
 
 function PublicNavBar() {
     return (
-<div></div>
+<div>Aqui Entra a NAVBAR</div>
         /*
         <nav className="navbar">
             <div className="logo">                
