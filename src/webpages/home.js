@@ -1,7 +1,6 @@
 import React from 'react';
-import GetUser from '../components/getUser';
-import ListOfAdvertising from '../components/getAdvertising';
-import CreateAdvertising from '../components/postAdvertising';
+
+//import CreateAdvertising from '../components/postAdvertising';
 
 function Home() {
   return (
@@ -18,15 +17,23 @@ function Home() {
             <li>
               <a href="/register">Cadastrar Conta</a>
             </li>
+            <li>
+              <a href="/login">Fazer Login</a>
+            </li>
+            <li>
+              <a href="/advertisements">Anúncios</a>
+            </li>
+            <li>
+              <a href="/newadvertisement">Criar anúncio</a>
+            </li>
           </ul>
         </nav>
       </header>
 
       <hr/>
+    {/*<PostAdvertising/>*/}
 
-      <ListOfAdvertising/>
-      <GetUser/>
-      <CreateAdvertising/>
+      
     </div>
   );
 }
