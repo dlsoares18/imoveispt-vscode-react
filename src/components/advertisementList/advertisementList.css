@@ -1,11 +1,13 @@
 .container {
 display: flex;
 justify-content: space-between;
+
 }
 
 .filterContainer {
     display: flex;
     justify-content: space-between;
+    
  }
  
  .inputFilterContainer {
@@ -37,4 +39,21 @@ justify-content: space-between;
 
 .container form button:hover {
     background-color: #6e424f;
+}
+
+.advertisementsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    overflow: auto;
+    background-color: #D7D9DF;
+    width:90%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.advertisementsContainer div{
+    flex: 0 0 calc(50% - 20px);
+    margin: 1%;
+    background-color: #fff;
 }
