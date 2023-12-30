@@ -17,11 +17,21 @@ function Home() {
             <li>
               <a href="/register">Cadastrar Conta</a>
             </li>
+            <li>
+              <a href="/login">Fazer Login</a>
+            </li>
+            <li>
+              <a href="/advertisements">Anúncios</a>
+            </li>
+            <li>
+              <a href="/newadvertisement">Criar anúncio</a>
+            </li>
           </ul>
         </nav>
       </header>
 
       <hr/>
+    {/*<PostAdvertising/>*/}
 
       <ListOfAdvertising/>
       <PostAdvertising/>

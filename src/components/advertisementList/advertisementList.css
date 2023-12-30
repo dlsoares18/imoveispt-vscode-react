@@ -1,0 +1,59 @@
+.container-adds {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.container-adds .filterContainer {
+    display: flex;
+    justify-content: space-evenly;   
+ }
+ 
+.container-adds .inputFilterContainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    padding-left: 10px;;
+ }
+ 
+ .container-adds .inputLabel {
+    margin-bottom: 5px;
+    color: #4D5361;
+ }
+
+ .container-adds input, .container-adds select{
+    width:150px;
+ }
+
+ .container-adds .filterContainer button{
+    border: none;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    background: #613A46;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.container-adds .filterContainer button:hover {
+    background-color: #6e424f;
+}
+
+.container-adds .advertisementsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    overflow: auto;
+    background-color: #D7D9DF;
+    width:90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-adds .advertisementsContainer div{
+    flex: 0 0 calc(50% - 20px);
+    margin: 1%;
+    background-color: #fff;
+}
