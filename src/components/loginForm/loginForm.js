@@ -72,9 +72,9 @@ function LoginForm() {
 
             <form>
                 <div className="inputContainer">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="text">Utilizador</label>
                     <input
-                        type="email"
+                        type="text"
                         name="username"
                         id="username"
                         value={postData.username}
