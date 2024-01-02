@@ -1,21 +1,40 @@
-import "./publicNavBar.css";
 import React from "react";
+import "./publicNavBar.css";
+import logo from '../../assets/logoImoveisPT.png';
 
-function PublicNavBar() {
+const PublicNavBar = () => {
     return (
-<div>Aqui Entra a NAVBAR</div>
-        /*
-        <nav className="navbar">
-            <div className="logo">                
-            </div>
-            <div className="buttons">
-                <button className="login-btn">
-                    
-                </button>
-            </div>
-        </nav>*/
-    )
-};
-
+        <div>
+            <nav className="navbar navbar-expand-lg">
+                <div className="img">
+                    <a href="/">
+                        <img src={logo} height={50} width={150}/>
+                    </a>
+                </div>
+                <div>
+                    <div id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className="nav-link active" href="/">
+                                    Início
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/register">
+                                    Criar conta
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/login">
+                                    Entrar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>        
+    );
+}
 
 export default PublicNavBar;

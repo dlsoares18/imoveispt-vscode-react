@@ -37,9 +37,7 @@ const ListOfAdvertising = () => {
                 <h1>Lista de Anúncios</h1>
                 <ul>{advertisings.map(advertising => (
                     <li key={advertising.id}>
-                        <Link to={`advertisiing/${advertising.id}`}>
-                            {advertising.title}
-                        </Link>
+                        {advertising.title}
                     </li>
                 ))}
                 </ul>
