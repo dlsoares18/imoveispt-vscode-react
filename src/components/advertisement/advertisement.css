@@ -1,0 +1,95 @@
+.container-add-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    text-align: center; /* Center text inside children */
+    width: auto; /* Make the width adaptive */
+    max-width: 75%;
+    margin: 0 auto; /* Center the container itself horizontally */
+}
+
+.container-add-detail .row{
+    display: flex;
+    flex-direction: row;
+    width: 75%;    
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    color: #4E5D82;
+    font-size: 16px;
+}
+
+.container-add-detail .row .left{
+    display: flex;
+    flex-direction: row;  
+    justify-content: first baseline;
+    margin-bottom: 10px;
+}
+
+.container-add-detail .row .right{
+    display: flex;
+    flex-direction: row;  
+    justify-content:end;
+}
+
+.container-add-detail .row h1{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.container-add-detail .row h2{
+    font-size: 18px;
+    margin: 5px;
+    font-weight: 500;
+}
+
+.container-add-detail .purple{
+    color:#612a46;
+}
+
+
+.container-add-detail .column{
+    flex: 1;
+}
+
+.container-add-detail .row img{
+    width: 100%;
+    max-height: 400px;
+    margin-top: 10px;
+}
+
+.container-add-detail .block{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-start;
+    margin-bottom: 0px;
+}
+
+.container-add-detail .block p{
+    margin: 5px;;
+}
+
+.container-add-detail .icon::before{
+    display: inline-block;
+    margin-right: 5px; /* Espaço à direita do ícone */
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+}
+
+.container-add-detail .icon-area::before{
+    content: url('../../assets/house-solid.svg')
+}
+
+.container-add-detail .icon-bed::before{
+    content: url('../../assets/bed-solid.svg')
+}
+
+.container-add-detail .icon-bath::before{
+    content: url('../../assets/bath-solid.svg')
+}
+
+.container-add-detail .icon-phone::before{
+    content: url('../../assets/phone-solid.svg')
+}

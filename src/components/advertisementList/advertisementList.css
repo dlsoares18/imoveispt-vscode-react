@@ -1,7 +1,9 @@
 .container-adds {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .container-adds .filterContainer {
@@ -13,7 +15,8 @@ justify-content: space-between;
     display: flex;
     flex-direction: column;
     padding-right: 10px;
-    padding-left: 10px;;
+    padding-left: 10px;
+    margin-bottom: 20px;
  }
  
  .container-adds .inputLabel {
@@ -29,9 +32,9 @@ justify-content: space-between;
     border: none;
     color: #fff;
     width: 120px;
-    height: 30px;
+    height: 25px;
     margin-bottom: 20px;
-    margin-top: 15px;
+    margin-top: 21px;
     background: #613A46;
     border-radius: 5px;
     font-size: 14px;
