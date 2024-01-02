@@ -8,20 +8,26 @@
 .card-img {
     width: 100%;
     height: 100%;
+    max-height:210px;
     object-fit: cover;
     margin-right: 10px;
-    padding-top: 25px;
+    padding-top: 10px;
+    padding-left: 20px;
+    
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
+    padding-right: 15px;
 }
 
 .card-text {
     margin-top: 0px;
     font-size: 14px;
     text-decoration: none;
+    margin-bottom: 10px;
 }
 
 .card-title {
@@ -35,32 +41,39 @@
     flex-direction: row;
 }
 
-.card button{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    color: #fff;
-    width: 180px;
-    height: 26px;
-    padding: 5%;
-    background: #613A46;
-    border-radius: 5px;
-    font-size: 13px;
-}
-
 .cont{
     margin: auto;
     width: auto;
 }
 
-.card button:hover {
-    background-color: #6e424f;
+.card .icon::before{
+    display: inline-block;
+    margin-right: 5px; /* Espaço à direita do ícone */
+    width: 15px; /* Largura do ícone */
+    height: 15px; /* Altura do ícone */
 }
 
-.card .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card .icon-area::before{
+    content: url('../../assets/house-solid.svg')
+}
+
+.card .icon-bed::before{
+    content: url('../../assets/bed-solid.svg')
+}
+
+.card .icon-bath::before{
+    content: url('../../assets/bath-solid.svg')
+}
+
+#location, #price, #status{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#status {
+    text-align: end;
+}
+
+#price {
+    color:#6e424f;
 }

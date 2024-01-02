@@ -15,7 +15,7 @@ function AdvertisementList() {
         maxPrice: ''
     });
     const [error, setError] = useState(null);
-    const [isloaded, setIsloaded] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     const propertyTypeOptions = [
         'Apartamento',
@@ -31,14 +31,14 @@ function AdvertisementList() {
       ];
 
     useEffect(() => {
-        fetch("https://localhost:7271/api/Advertisements/")
+        fetch("https://localhost:7271/api/advertisements/")
             .then(response => response.json())
             .then((data) => {
-                setIsloaded(true);
+                setIsLoaded(true);
                 setAdvertisements(data);
             },
                 (error) => {
-                    setIsloaded(false);
+                    setIsLoaded(false);
                     setError(error);
                 }
             );
@@ -64,7 +64,7 @@ function AdvertisementList() {
             isParamInitialized = true
         }
 
-        if (filters.propertyType !== '' && filters.propertyType > 0) {
+        if (filters.propertyType !== '' && filters.propertyType >= 0) {
             if (isParamInitialized) {
                 url += '&propertyType=' + filters.propertyType
             } else {
@@ -112,7 +112,7 @@ function AdvertisementList() {
             <p>Erro:{error.message}</p>
         </div>)
     }
-    else if (!isloaded) {
+    else if (!isLoaded) {
         return (
             <div>...Loading...</div>
         )
@@ -132,7 +132,7 @@ function AdvertisementList() {
                             >
                                 <option value="">Escolha uma opção</option>
                                 {propertyTypeOptions.map((type, index) => (
-                                    <option key={index} value={type}>
+                                    <option key={index} value={index + 1}>
                                         {type}
                                     </option>
                                 ))}
@@ -201,7 +201,7 @@ function AdvertisementList() {
             <div className="advertisementsContainer">
                 {advertisements.map((advertisement) => (
                     <div key={advertisement.id}>
-                    <Link to={`advertisement/${advertisement.id}`} style={{ textDecoration: 'none' }} >
+                    <Link to={`advertisements/${advertisement.id}`} style={{ textDecoration: 'none' }} >
                         <AdvertisementCard advertisement={advertisement} />
                     </Link>
                     </div>
