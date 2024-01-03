@@ -12,17 +12,17 @@ margin-left: 20px;
 }
 
 .navbar-nav {
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 }
 
 .nav-item {
-    list-style: none;
-    margin-left: 20px;
+list-style: none;
+margin-left: 20px;
 }
 
 .nav-link {
-    padding: 20px;
+padding: 20px;
 }
 
 .icon::before{
@@ -37,13 +37,22 @@ margin-left: 20px;
     content: url('../../assets/user-solid.svg');
 }
 
-.icon-newaccount::before{
+.icon-logout::before{
+    content: url('../../assets/right-from-bracket-solid.svg');
+}
+
+.icon-myads::before{
+    content: url('../../assets/thumbtack-solid.svg');
+}
+
+.icon-newad::before{
     content: url('../../assets/circle-plus-solid.svg');
 }
 
-.icon-login::before{
-    content: url('../../assets/user-solid.svg');
+.icon-home::before{
+    content: url('../../assets/house-solid.svg');
 }
+
 
 .nav-button {
     margin-right: 10px;
@@ -74,3 +83,6 @@ margin-left: 20px;
     background-color: #D7D9DF;
 }
 
+.logout-button {
+   margin-left: 5px;
+}

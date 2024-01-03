@@ -1,12 +1,14 @@
 import Advertisement from "../components/advertisement/advertisement";
+import AuthNavBar from "../components/authNavBar/authNavBar";
 import PublicNavBar from "../components/publicNavBar/publicNavBar";
 
 function AdvertisementDetails() {
+
+  let authenticated = localStorage.getItem('token');
+
     return (
       <div>
-        {/* Colocar aqui o elemento barra de navegação que irei criar para anônimos contendo apenas o
-        logo de imóveis pt e um ícone de user e o link entrar*/}
-        <PublicNavBar></PublicNavBar>
+        {authenticated ? <AuthNavBar/> : <PublicNavBar/>}
         <Advertisement/>
       </div>
     );

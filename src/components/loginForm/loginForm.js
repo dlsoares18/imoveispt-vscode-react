@@ -45,15 +45,6 @@ function LoginForm() {
 
             if (response.status === 200) {
                 localStorage.setItem('token', response.data.token);
-
-
-                /*   TODO:
-
-                    - later to logout use: 
-                        localStorage.removeItem('token');                        
-                */
-
-
                 navigate('/');
             }
 
@@ -72,7 +63,7 @@ function LoginForm() {
 
             <form>
                 <div className="inputContainer">
-                    <label htmlFor="text">Utilizador</label>
+                    <label htmlFor="text">Email</label>
                     <input
                         type="text"
                         name="username"

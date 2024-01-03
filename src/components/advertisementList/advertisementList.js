@@ -198,15 +198,15 @@ function AdvertisementList() {
                     <button onClick={fetchAdvertisements}>Filtrar</button>
                 </div>
 
-            <div className="advertisementsContainer">
-                {advertisements.map((advertisement) => (
-                    <div key={advertisement.id}>
-                    <Link to={`advertisements/${advertisement.id}`} style={{ textDecoration: 'none' }} >
-                        <AdvertisementCard advertisement={advertisement} />
-                    </Link>
-                    </div>
-                ))}
-            </div>
+                <div className="advertisementsContainer">
+                    {advertisements.map((advertisement) => (
+                        <div key={advertisement.id}>
+                        <Link to={`advertisements/${advertisement.id}`} style={{ textDecoration: 'none' }} >
+                            <AdvertisementCard advertisement={advertisement} />
+                        </Link>
+                        </div>
+                    ))}
+                </div>
         </div>
             
         );
