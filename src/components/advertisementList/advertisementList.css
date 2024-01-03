@@ -8,7 +8,9 @@
 
 .container-adds .filterContainer {
     display: flex;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
+    padding-right: 25px; 
+    padding-left: 25px;  
  }
  
 .container-adds .inputFilterContainer {
@@ -31,10 +33,10 @@
  .container-adds .filterContainer button{
     border: none;
     color: #fff;
-    width: 120px;
-    height: 25px;
+    width: 110px;
+    height: 30px;
     margin-bottom: 20px;
-    margin-top: 21px;
+    margin-top: 17px;
     background: #613A46;
     border-radius: 5px;
     font-size: 14px;

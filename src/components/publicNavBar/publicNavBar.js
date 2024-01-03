@@ -14,20 +14,32 @@ const PublicNavBar = () => {
                 <div>
                     <div id="navbarNav">
                         <ul className="navbar-nav">
+
                             <li className="nav-item">
-                                <a className="nav-link active" href="/">
-                                    Início
-                                </a>
+                                <button className="nav-button">
+                                    <a href="/">
+                                        <span className="icon icon-home"></span>
+                                        Home
+                                    </a>
+                                </button>
                             </li>
+
                             <li className="nav-item">
-                                <a className="nav-link" href="/register">
-                                    Criar conta
-                                </a>
+                                <button className="nav-button">
+                                    <a href="/register">
+                                        <span className="icon icon-newaccount"></span>
+                                        Criar conta
+                                    </a>
+                                </button>
                             </li>
+
                             <li className="nav-item">
-                                <a className="nav-link" href="/login">
-                                    Entrar
-                                </a>
+                                <button className="nav-button login-button">
+                                    <a href="/login">
+                                        <span className="icon icon-login"></span>
+                                        Login
+                                    </a>
+                                </button>
                             </li>
                         </ul>
                     </div>

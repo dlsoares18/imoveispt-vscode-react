@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from "react";
 import axios from 'axios';
 import "./createAdvertisementForm.css";
+import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
 
 function CreateAdvertisementForm() {
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [showToast, setShowToast] = useState(false);
+
     const propertyTypeOptions = [
         'Apartamento',
         'Armazém',
@@ -41,6 +50,19 @@ function CreateAdvertisementForm() {
         }));
     };
 
+    useEffect(() => {
+        if (location.state && location.state.showToast) {
+            setShowToast(true);
+        }
+    }, [location]);
+
+    useEffect(() => {
+        if (showToast) {
+            toast.error("Create failed. Please try again.");
+            setShowToast(false);
+        }
+    }, [showToast]);
+
 
     const handlePostRequest = async () => {
         try {
@@ -48,19 +70,25 @@ function CreateAdvertisementForm() {
             
             postData.propertyType = Number(postData.propertyType)
 
-            const response = await axios.post('https://localhost:7271/api/Advertisements/', postData, {
+            const response = await axios.post('https://localhost:7271/api/advertisements/', postData, {
                 headers: {
                 Authorization: `Bearer ${token}`
                 }});
             console.log('Resposta da API:', response.data);
 
+            if (response.status === 201) {
+                navigate('/myadvertisements');
+            } 
+
         } catch (error) {
             console.error('Erro ao fazer a solicitação POST:', error);
+            navigate('/newadvertisement', { state: { showToast: true } });
         }
     };
 
     return (
         <div className="container-create-add">
+            
             <header className="header">
                 <span>Criar Anúncio</span>
             </header>
@@ -86,7 +114,7 @@ function CreateAdvertisementForm() {
                         <select name="propertyType" value={postData.propertyType} onChange={handleInputChange}>
                             <option value="">Selecione o tipo de propriedade</option>
                             {propertyTypeOptions.map((type, index) => (
-                                <option key={index} value={index}>
+                                <option key={index} value={index + 1}>
                                     {type}
                                 </option>
                             ))}
@@ -97,7 +125,7 @@ function CreateAdvertisementForm() {
                 <div className="inputContainer">
                     <label>
                         Preço:
-                        <input type="text" name="price" value={postData.price} onChange={handleInputChange} required />
+                        <input type="number" name="price" value={postData.price} onChange={handleInputChange} required />
                     </label>
                 </div>
 
@@ -139,7 +167,7 @@ function CreateAdvertisementForm() {
                 <div className="inputContainer">
                     <label>
                         Código Postal:
-                        <input type="number" name="postalCode" value={postData.postalCode} onChange={handleInputChange} required />
+                        <input type="text" name="postalCode" value={postData.postalCode} onChange={handleInputChange} required />
                     </label>
                 </div>
 
@@ -165,7 +193,10 @@ function CreateAdvertisementForm() {
                 </div>
             </form>
 
-            <button onClick={handlePostRequest}>Criar novo anúncio</button>
+            <button className="create-ad-button" onClick={handlePostRequest}>Criar novo anúncio</button>
+            
+            
+            <ToastContainer />
         </div>
     );
 };

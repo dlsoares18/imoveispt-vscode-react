@@ -1,4 +1,4 @@
-.container-create-add{
+.container-update-add{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -7,14 +7,14 @@
     flex-direction: column;
 }
 
-.container-create-add .header {
+.container-update-add .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
 }
 
-.container-create-add .header span {
+.container-update-add .header span {
     padding-top: 15px;
     font-weight: 500;
     font-size: 30px;
@@ -22,27 +22,27 @@
     color: #4D5361;
 }
 
-.container-create-add form {
+.container-update-add form {
     display: flex;
     align-items: center;
     flex-direction: column;
     overflow: auto;
 }
 
-.container-create-add form .inputContainer {
+.container-update-add form .inputContainer {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
 }
 
-.container-create-add form .inputContainer label{
+.container-update-add form .inputContainer label{
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 8px;
 }
 
-.container-create-add form .inputContainer input, .container-create-add form .inputContainer select {
+.container-update-add form .inputContainer input, .container-update-add form .inputContainer select {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -56,7 +56,7 @@
     box-sizing: border-box;
 }
 
-.container-create-add .create-ad-button{
+.container-update-add .update-ad-button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -73,6 +73,6 @@
     margin-bottom: 20px;
 }
 
-.container-create-add .create-ad-button button:hover {
+.container-update-add .update-ad-button button:hover {
     background-color: #6e424f;
 }
