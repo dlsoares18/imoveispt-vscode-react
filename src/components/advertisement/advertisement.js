@@ -12,7 +12,7 @@ function Advertisement() {
   const [advertisementDetails, setAdvertisementDetails] = useState([]);
 
   useEffect(() => {
-  fetch("https://localhost:7271/api/advertisements/"+id)
+  fetch("https://localhost:7271/api/advertisements/"+ id)
     .then(response => response.json())
     .then((data) => {
         setIsLoaded(true);
@@ -23,7 +23,7 @@ function Advertisement() {
           setError(error);
         }
     );
-  }, []);
+  }, [id]);
 
   if (error) {
     return (<div>
@@ -132,13 +132,8 @@ function Advertisement() {
                 <h2>Mapa</h2>
               </div>
 
-              <div className="row">
-              <GoogleMap 
-                postalCode={advertisementDetails.postalCode} 
-                addressStreet={advertisementDetails.addressStreet}
-                addressNumber={advertisementDetails.addressNumber}
-                addressLocation={advertisementDetails.addressLocation}
-              />
+              <div className="row row-map">
+                <GoogleMap advertisement={advertisementDetails} />
               </div>
           </div>
       </div>
