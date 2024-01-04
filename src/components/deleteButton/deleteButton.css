@@ -1,0 +1,22 @@
+
+.delete-button{
+    color:#4E5D82;
+    background: #DFD9DF;
+    border: none;
+    border-radius: 5px;
+    margin-left:20px;
+    padding:8px;
+    width: 40px;
+    margin-top: 10px;
+}
+
+.delete-button button:hover{
+    background-color: #d896aa;
+}
+
+.icon-delete::before{
+    content: url('../../assets/trash-solid.svg'); 
+    display: inline-block;
+    width: 15px; /* Largura do ícone */
+    height: 15px; /* Altura do ícone */
+}

@@ -1,8 +1,10 @@
-import { Container } from "react-bootstrap";
 import defaultImage from "../../assets/house.png";
 import "./myAdvertisementCard.css";
 import { Link } from "react-router-dom";
-import UpdateAdvertisement from "../../webpages/updateAdvertisement";
+import DeleteButton from "../deleteButton/deleteButton";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+
 
 function MyAdvertisementCard({ advertisement }) {
     return (
@@ -19,9 +21,7 @@ function MyAdvertisementCard({ advertisement }) {
                 </button>
               </Link>
               
-              <button>
-                <span className="icon icon-delete"></span>
-              </button>
+              <DeleteButton id={advertisement.id}/>
           </section>
 
           <h2 className="card-title">{advertisement.title}</h2>
@@ -45,8 +45,7 @@ function MyAdvertisementCard({ advertisement }) {
 
           <p className="card-text" id="price">{new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR' }).format(advertisement.price)}</p>
 
-          <p className="card-text" id="status"> {advertisement.status}</p>
-          
+          <p className="card-text" id="status"> {advertisement.status}</p>        
         </div>
       </div>
     );
