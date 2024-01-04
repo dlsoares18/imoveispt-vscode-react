@@ -1,0 +1,78 @@
+.container-update-add{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-update-add .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.container-update-add .header span {
+    padding-top: 15px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 24px;
+    color: #4D5361;
+}
+
+.container-update-add form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.container-update-add form .inputContainer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.container-update-add form .inputContainer label{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 8px;
+}
+
+.container-update-add form .inputContainer input, .container-update-add form .inputContainer select {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px;
+    width: 450px;
+    height: 26px;
+    font-size: 12px;
+    border: 1px solid #4D5361;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.container-update-add .update-ad-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #fff;
+    width: 300px;
+    height: 26px;
+    padding: 19px;
+    background: #613A46;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container-update-add .update-ad-button button:hover {
+    background-color: #6e424f;
+}

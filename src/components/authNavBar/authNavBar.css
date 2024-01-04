@@ -1,0 +1,88 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D7D9DF;
+    height: auto;
+    padding: 10px;
+}
+
+.img {
+margin-left: 20px;
+}
+
+.navbar-nav {
+display: flex;
+align-items: center;
+}
+
+.nav-item {
+list-style: none;
+margin-left: 20px;
+}
+
+.nav-link {
+padding: 20px;
+}
+
+.icon::before{
+    display: inline-block;
+    width: 15px; /* Largura do ícone */
+    height: 15px; /* Altura do ícone */
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
+.icon-user::before{
+    content: url('../../assets/user-solid.svg');
+}
+
+.icon-logout::before{
+    content: url('../../assets/right-from-bracket-solid.svg');
+}
+
+.icon-myads::before{
+    content: url('../../assets/thumbtack-solid.svg');
+}
+
+.icon-newad::before{
+    content: url('../../assets/circle-plus-solid.svg');
+}
+
+.icon-home::before{
+    content: url('../../assets/house-solid.svg');
+}
+
+
+.nav-button {
+    margin-right: 10px;
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    align-items: center;
+    color: #4d5361;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    background-color: #eaeaeb;
+}
+
+.nav-button a {
+    text-decoration: none;
+    color: #4d5361;
+ }
+
+ .nav-button a:hover {
+    text-decoration: none;
+ }
+
+.user-button:hover {
+    background-color: #D7D9DF;
+}
+
+.logout-button {
+   margin-left: 5px;
+}
