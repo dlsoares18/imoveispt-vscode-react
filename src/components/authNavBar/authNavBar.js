@@ -52,7 +52,7 @@ const AuthNavBar = () => {
 
                             <li className="nav-item">                            
                                 <button className="nav-button" >
-                                    <a href="myadvertisements">
+                                    <a href="/myadvertisements">
                                         <span className="icon icon-myads"></span>
                                         Meus anúncios
                                     </a>
