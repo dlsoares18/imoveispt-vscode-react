@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const ListOfUser=()=>{
     let {id}=useParams();
@@ -17,7 +17,7 @@ const ListOfUser=()=>{
             setIsloaded(false);
             setError(error);
         });
-    },[]
+    },[id]
     );
     if(error){
     return(<div>

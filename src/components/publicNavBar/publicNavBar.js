@@ -8,7 +8,7 @@ const PublicNavBar = () => {
             <nav className="navbar navbar-expand-lg">
                 <div className="img">
                     <a href="/">
-                        <img src={logo} height={50} width={150}/>
+                        <img src={logo} height={50} width={150} alt="Logo"/>
                     </a>
                 </div>
                 <div>

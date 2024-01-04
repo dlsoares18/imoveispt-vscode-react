@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import "./createAdvertisementForm.css";
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from "react-toastify";
 
 
 function CreateAdvertisementForm() {
@@ -41,6 +43,16 @@ function CreateAdvertisementForm() {
         }));
     };
 
+    const [showToast, setShowToast] = useState(false);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (showToast) {
+            toast.error("Create failed. Please try again.");
+            setShowToast(false);
+        }
+    }, [showToast]);
+
 
     const handlePostRequest = async () => {
         try {
@@ -56,6 +68,7 @@ function CreateAdvertisementForm() {
 
         } catch (error) {
             console.error('Erro ao fazer a solicitação POST:', error);
+            navigate('/newadvertisement', { state: { showToast: true } });
         }
     };
 
@@ -164,6 +177,8 @@ function CreateAdvertisementForm() {
                     </label>
                 </div>
             </form>
+
+            <ToastContainer />
 
             <button onClick={handlePostRequest}>Criar novo anúncio</button>
         </div>

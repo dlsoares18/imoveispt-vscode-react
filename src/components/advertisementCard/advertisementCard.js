@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import defaultImage from "../../assets/house.png";
 import "./advertisementCard.css";
 

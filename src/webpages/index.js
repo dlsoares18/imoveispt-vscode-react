@@ -1,5 +1,5 @@
 import AdvertisementList from "../components/advertisementList/advertisementList";
-import LoginForm from "../components/loginForm/loginForm";
+//import LoginForm from "../components/loginForm/loginForm";
 import PublicNavBar from "../components/publicNavBar/publicNavBar";
 
 function Advertisements() {
