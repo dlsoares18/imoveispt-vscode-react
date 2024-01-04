@@ -16,7 +16,11 @@ function MyAdvertisementList() {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        fetch(`https://localhost:7271/api/ApplicationUsers/${userId}`)
+        fetch(`https://localhost:7271/api/ApplicationUsers/${userId}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
             .then(response => response.json())
             .then((data) => {
                 setIsLoaded(true);

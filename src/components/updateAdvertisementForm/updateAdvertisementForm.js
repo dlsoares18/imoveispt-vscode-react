@@ -7,54 +7,13 @@ import { useLocation } from 'react-router-dom';
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
-
 function UpdateAdvertisementForm() {
 
-    // pegar os dados do anúncio:
-    let {id}=useParams();
+    let {id} = useParams();
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [advertisement, setAdvertisement] = useState([]);
 
-    const location = useLocation();
-    const navigate = useNavigate();
-    const [showToast, setShowToast] = useState(false);
-  
-    useEffect(() => {
-    fetch("https://localhost:7271/api/advertisements/"+id)
-      .then(response => response.json())
-      .then((data) => {
-          setIsLoaded(true);
-          setAdvertisement(data);
-      },
-          (error) => {
-            setIsLoaded(false);
-            setError(error);
-          }
-      );
-    }, []);
-    
-    // enviar os novos dados:
-    const propertyTypeOptions = [
-        'Apartamento',
-        'Armazém',
-        'Escritório',
-        'Estúdio',
-        'Garagem',
-        'Loja',
-        'Moradia',
-        'Prédio',
-        'Quinta',
-        'Terreno',
-    ];
-
-     const statusOptions = [
-        'Disponível',
-        'Reservado',
-        'Vendido',
-    ];
-
-    // deixar o formulário já preenchido com os dados atuais.
     const [putData, setPutData] = useState({
         title: '',
         description: '',
@@ -71,7 +30,47 @@ function UpdateAdvertisementForm() {
         status: '',
         picture: '',
      });
-     
+
+    const propertyTypeOptions = [
+        'Apartamento',
+        'Armazém',
+        'Escritório',
+        'Estúdio',
+        'Garagem',
+        'Loja',
+        'Moradia',
+        'Prédio',
+        'Quinta',
+        'Terreno',
+    ];
+
+    const statusOptions = [
+        'Disponível',
+        'Reservado',
+        'Vendido',
+    ];
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [showToast, setShowToast] = useState(false);
+
+
+    // Pegar os dados atuais do anúncio:
+    useEffect(() => {
+    fetch("https://localhost:7271/api/advertisements/"+ id)
+      .then(response => response.json())
+      .then((data) => {
+          setIsLoaded(true);
+          setAdvertisement(data);
+      },
+          (error) => {
+            setIsLoaded(false);
+            setError(error);
+          }
+      );
+    }, []);
+    
+    // preencher o formulário com os dados(atuais) do anúncio, caso o fetch tenha funcionado.     
      useEffect(() => {
         if (isLoaded) {
             setPutData({
@@ -102,12 +101,14 @@ function UpdateAdvertisementForm() {
         }));
     };
 
+    // Toast 
     useEffect(() => {
         if (location.state && location.state.showToast) {
             setShowToast(true);
         }
     }, [location]);
 
+    // Toast
     useEffect(() => {
         if (showToast) {
             toast.error("Update failed. Please try again.");
@@ -115,6 +116,7 @@ function UpdateAdvertisementForm() {
         }
     }, [showToast]);
 
+    // Enviar os novos dados(do formulário). Atualizar no banco de dados.
     const handlePutRequest = async () => {
         try {
             const token = localStorage.getItem('token');
