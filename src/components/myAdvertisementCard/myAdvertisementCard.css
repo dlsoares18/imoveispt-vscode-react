@@ -84,11 +84,6 @@
     margin-right: 0px; 
 }
 
-.mycard .icon-delete::before{
-    content: url('../../assets/trash-solid.svg');
-    margin-right: 0px; 
-}
-
 #location, #price, #status{
     font-weight: 500;
     font-size: 16px;

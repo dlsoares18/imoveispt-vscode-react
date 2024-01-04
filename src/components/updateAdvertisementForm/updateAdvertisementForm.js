@@ -260,8 +260,7 @@ function UpdateAdvertisementForm() {
             </form>
 
             <button className="update-ad-button" onClick={handlePutRequest}>Guardar alterações</button>
-            
-            <ToastContainer />
+            <ToastContainer /> 
         </div>
     );
 };
